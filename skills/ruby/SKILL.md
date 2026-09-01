@@ -13,17 +13,32 @@ description: >-
 
 Apply the general `naming` skill before creating, renaming, or proposing Ruby names or durable paths.
 
-- Use `snake_case` for methods, local variables, and symbols; use `CamelCase` for classes and modules.
-- Use `?` for predicates that return boolean-like results. Use `!` only when it communicates a meaningful dangerous or
-  mutating distinction; do not add punctuation merely for emphasis.
-- Preserve public method names, keyword names, constants, and serialized or reflective names as contracts unless changing
-  that surface is in scope.
+- **Case** — Use `snake_case` for methods, local variables, and symbols; use `CamelCase` for classes and modules.
+- **Predicates** — Use `?` for predicates that return boolean-like results. Use `!` only when it communicates a meaningful
+  dangerous or mutating distinction; do not add punctuation merely for emphasis.
+- **Contracts** — Preserve public method names, keyword names, constants, and serialized or reflective names as contracts
+  unless changing that surface is in scope.
 
 ## Style
 
-Read [style defaults](references/style.md) completely whenever this skill is active. Treat them as core Ruby guidance,
-refined by explicit repository rules, configured formatters, and established local conventions when those provide a
-concrete conflicting rule.
+These are core Ruby working defaults. Explicit repository rules, configured formatters, and established local conventions
+refine them and override them only for a concrete conflict.
+
+- **Formatting** — Use the formatter already configured by the repository. When none is configured, follow surrounding
+  style and do not introduce a formatter as an incidental change. Do not hand-align code against formatter output.
+- **Expression methods** — Use `def foo = ...` for a simple expression method when the supported Ruby range permits it
+  and the form improves clarity.
+- **Member order** — When no stronger local order exists, use:
+  1. `include`/`extend`
+  2. constants, alphabetically
+  3. `attr_*`, alphabetically
+  4. `initialize`
+  5. public methods, alphabetically
+  6. private methods, alphabetically
+- **Ordering** — Alphabetize arrays, hashes, assignments, and methods only when order is semantically irrelevant and no
+  surrounding convention requires another order.
+
+Do not reorder or reformat unrelated Ruby merely because this skill is active.
 
 ## Baseline
 
@@ -84,14 +99,16 @@ concrete conflicting rule.
 
 ## References
 
-- Prefer authoritative project documentation. For Ruby language and standard-library behavior, use
+- **Ruby docs** — Prefer authoritative project documentation. For Ruby language and standard-library behavior, use
   <https://docs.ruby-lang.org/en/> for the project's supported version; do not use ruby-doc.org or APIdock as
   authoritative substitutes when official documentation is available. Do not preload or preserve a version table in
   this skill.
-- For Bundler command behavior, consult <https://bundler.io/man/> when the installed/configured version matters.
-- Load [Minitest conventions](references/minitest.md) only when Minitest layout or naming is materially being created,
-  changed, or reviewed. Do not load it for RSpec or for behavior-only test work whose established naming remains intact.
-- Load [YARD](references/yard.md) only when writing or reviewing Ruby public API documentation.
+- **Bundler** — For Bundler command behavior, consult <https://bundler.io/man/> when the installed/configured version
+  matters.
+- **Minitest** — Load [Minitest conventions](references/minitest.md) only when Minitest layout or naming is materially
+  being created, changed, or reviewed. Do not load it for RSpec or for behavior-only test work whose established naming
+  remains intact.
+- **YARD** — Load [YARD](references/yard.md) only when writing or reviewing Ruby public API documentation.
 
 ## Verification and testing
 

@@ -12,8 +12,42 @@ description: >-
 
 ## Naming
 
-Apply the general `naming` skill before creating, renaming, or proposing C names or durable paths. Preserve naming that is
-part of a public ABI, external interface, or established project convention unless changing that contract is in scope.
+- **General** — Apply the general `naming` skill before creating, renaming, or proposing C names or durable paths.
+- **Contracts** — Preserve naming that is part of a public ABI, external interface, or established project convention
+  unless changing that contract is in scope.
+
+## Style
+
+These are C working defaults when no stronger repository rule, configured formatter, or established surrounding style
+settles the decision.
+
+- **Default** — Use the structural conventions of
+  [Linux kernel coding style](https://docs.kernel.org/process/coding-style.html) when no stronger local convention exists.
+- **Indent** — Use one tab (8 columns). Do not convert indentation tabs to spaces.
+- **Braces** — Put control-statement opening braces on the same line. Put a function opening brace on the next line in
+  the first column.
+
+  ```c
+  void function(void)
+  {
+  	/* body */
+  }
+  ```
+
+- **Switch** — Align `case` and `default` with `switch`; indent the body one tab.
+
+  ```c
+  switch (var) {
+  case A:
+  	/* body */
+  	break;
+  }
+  ```
+
+- **Ordering** — Alphabetize declarations, enum members, table entries, or helper functions only when order is
+  semantically irrelevant and no surrounding convention requires another order.
+
+Do not restyle unrelated C merely because this skill is active.
 
 ## Baseline
 
@@ -55,12 +89,6 @@ part of a public ABI, external interface, or established project convention unle
   `-Werror`, a new language standard, or a repository-wide sanitizer policy merely for local validation.
 - Test success, boundary values, allocation or I/O failure, partial initialization, cleanup, and supported platform or
   compiler variants in proportion to the changed contract.
-
-## References
-
-Load [style defaults](references/style.md) only when a C source-style decision is material and repository rules, a
-configured formatter, or established surrounding style do not already settle it. Do not load the reference for
-behavior-only work whose style remains unchanged.
 
 ## Verification and testing
 

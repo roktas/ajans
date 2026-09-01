@@ -20,16 +20,18 @@ output or block the task solely because the skill is missing.
 
 Apply the general `naming` skill first, then refine it with these Go-specific conventions.
 
-- Use `camelCase` for unexported names and `PascalCase` for exported names; avoid snake case and all-caps naming.
-- Keep initialisms consistently cased: `APIKey`, `userID`, `HTTPClient`, `parseXML`.
-- Keep names unexported by default. Export only when another package or an external contract needs access.
-- Avoid shadowing builtins and imported package names.
-- Use short lowercase package names, preferably one clear word. Avoid catch-all package names such as `common`, `util`,
-  `utils`, `helper`, `helpers`, `types`, and `interfaces`.
-- Avoid package-name chatter at call sites: prefer `customer.New()` over `customer.NewCustomer()`.
-- Use short, consistent receiver names derived from the receiver type; avoid `this`, `self`, and `me`.
-- Omit `Get` from getters (`Address()`); use `Set` for setters (`SetAddress()`).
-- Name single-method interfaces from their method when natural, commonly with an `-er` form such as `Reader` or
-  `Writer`; do not append `Interface` merely to mark the type.
-- Prefer short lowercase filenames. For multiword filenames, follow repository convention; when none exists, prefer
-  concatenation and reserve underscores for Go's meaningful filename suffixes.
+- **Case** — Use `camelCase` for unexported names and `PascalCase` for exported names; avoid snake case and all-caps
+  naming.
+- **Initialisms** — Keep initialisms consistently cased: `APIKey`, `userID`, `HTTPClient`, `parseXML`.
+- **Export** — Keep names unexported by default. Export only when another package or an external contract needs access.
+- **Shadowing** — Avoid shadowing builtins and imported package names.
+- **Packages** — Use short lowercase package names, preferably one clear word. Avoid catch-all package names such as
+  `common`, `util`, `utils`, `helper`, `helpers`, `types`, and `interfaces`.
+- **Package chatter** — Avoid repeating the package name at call sites: prefer `customer.New()` over
+  `customer.NewCustomer()`.
+- **Receivers** — Use short, consistent receiver names derived from the receiver type; avoid `this`, `self`, and `me`.
+- **Getters** — Omit `Get` from getters (`Address()`); use `Set` for setters (`SetAddress()`).
+- **Interfaces** — Name single-method interfaces from their method when natural, commonly with an `-er` form such as
+  `Reader` or `Writer`; do not append `Interface` merely to mark the type.
+- **Files** — Prefer short lowercase filenames. For multiword filenames, follow repository convention; when none exists,
+  prefer concatenation and reserve underscores for Go's meaningful filename suffixes.
