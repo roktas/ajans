@@ -3,6 +3,13 @@
 Ajans is a small collection of focused agent skills. Each skill should add specific judgment or behavior without turning
 ordinary work into a framework.
 
+## Agent Plugins
+
+Ajans is packaged as an [Agent Plugins v1](https://agent-plugins.org/) plugin. The root [`plugin.json`](plugin.json)
+declares the v1.0.0 schema, and portable skills live at the standard `skills/<name>/SKILL.md` discovery location.
+Client-specific files bundled inside a skill, such as `agents/openai.yaml`, remain skill-local metadata and are not
+portable Agent Plugins component types.
+
 ## Sources
 
 ### Grilling
