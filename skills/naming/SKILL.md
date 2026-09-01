@@ -58,6 +58,19 @@ language skill has a `## Naming` section, apply it as a language-specific refine
     `service` when a domain name states the responsibility more precisely.
 11. Break these rules only for a concrete convention, contract, interoperability requirement, or clarity reason.
 
+## Examples
+
+Use these as patterns, not literal replacements:
+
+- In a `provision` context, prefer `Plan` over `ProvisionPlan`: the surrounding scope already supplies `Provision`.
+- Prefer `bash` over `lang-bash` when `lang-` is only a category prefix and does not distinguish a real sibling concept.
+- Prefer `smoke` over `lxd-smoke` when LXD is only the current backend. Add the backend only when multiple backend-specific
+  smoke helpers coexist.
+- Prefer `target_module` over `link_target_list_module` when link/list mechanics are implementation detail rather than a
+  domain distinction that must separate siblings.
+- Prefer a contextual path such as `state/hosts/` over repeating the parent concept in a child such as
+  `state/host-state/`.
+
 ## Paths
 
 Treat durable file and directory paths as naming decisions with an additional portability contract.
