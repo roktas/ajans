@@ -32,12 +32,10 @@ make prose seem human.
 3. Load the matching language reference completely when one is available.
 4. Find recurring pattern clusters and identify the concrete weakness they create. A watched word, punctuation mark,
    sentence shape, or formatting choice alone is not enough.
-5. For a substantial English rewrite, several cluster types, or a plausible false positive, also read
-   [English examples](references/english-examples.md) before editing.
-6. Repair the underlying weakness with the smallest coherent edit. Preserve useful irregularity and intentional form.
-7. Audit the revision for lost meaning, changed claim strength, fabricated detail, flattened voice, regenerated
+5. Repair the underlying weakness with the smallest coherent edit. Preserve useful irregularity and intentional form.
+6. Audit the revision for lost meaning, changed claim strength, fabricated detail, flattened voice, regenerated
    scaffolding, unstable terminology, and remaining clusters.
-8. Stop when the prose is natural, correct, faithful, and genre-appropriate. More editing can create a new formula.
+7. Stop when the prose is natural, correct, faithful, and genre-appropriate. More editing can create a new formula.
 
 ## Calibration
 
