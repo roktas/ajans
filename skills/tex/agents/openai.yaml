@@ -1,0 +1,4 @@
+interface:
+  display_name: "TeX"
+  short_description: "TeX source, builds, macros, and rendered validation"
+  default_prompt: "Use $tex to write or revise substantive TeX source."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "C"
+  short_description: "C ABI, ownership, lifetime, and undefined behavior"
+  default_prompt: "Use $c to write or revise substantive C code and public contracts."

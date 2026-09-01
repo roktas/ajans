@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ruby"
+  short_description: "Ruby APIs, gems, loading, tests, and compatibility"
+  default_prompt: "Use $ruby to write or revise substantive Ruby code and package behavior."
