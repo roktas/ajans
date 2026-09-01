@@ -3,15 +3,23 @@
 ## Skill design
 
 - Keep skills compact, direct, and useful to a competent human as well as an agent.
-- Keep core guidance in `SKILL.md`. Use `references/` only for conditional detail that benefits from progressive disclosure.
-- Style is always core. Do not move style rules to `references/`; keep them in the owning `SKILL.md`.
-- Do not duplicate strong external guidance. When an established external skill owns a domain well, delegate to it and keep only Ajans-specific guidance locally.
+- Keep guidance that applies whenever a skill is active in `SKILL.md`. Use `references/` for conditional detail that
+  benefits from progressive disclosure, including language-, framework-, or task-specific calibration.
+- Keep always-applicable style guidance in the owning `SKILL.md`; do not hide core style behind a reference.
+- Prefer delegation when a strong external skill already owns a domain and can be used directly. When Ajans intentionally
+  adapts or vendors external guidance for portability or a different local contract, keep the adaptation focused,
+  preserve required attribution and license notices, and document the upstream source in `README.md`.
 
-## Specialist boundaries
+## Skill boundaries
 
-- Keep specialist skills focused on domain-specific judgment, not generic task modes or workflow controls.
-- Do not mirror generic sections for debugging, compatibility review, minimal changes, cleanup, verification, simplification, polishing, or writing modes merely because those activities can occur in the domain.
-- When a domain has unique guidance for one of those decisions, place only the domain-specific distinction under its natural subject heading instead of creating a generic workflow section.
+- Give each skill one coherent domain, judgment surface, or behavior with a clear activation boundary.
+- Cross-cutting skills are appropriate when they materially change agent behavior and remain focused, such as writing,
+  de-AI editing, testing, or interactive decision stress-testing.
+- Keep language and domain specialists focused on domain-specific judgment. Do not mirror generic sections for debugging,
+  compatibility review, minimal changes, cleanup, verification, simplification, polishing, or writing modes merely
+  because those activities can occur in the domain.
+- When a domain has unique guidance for a cross-cutting concern, place only the domain-specific distinction under its
+  natural subject heading instead of recreating the general skill or workflow.
 
 ## Bash maintenance
 

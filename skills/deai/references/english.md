@@ -103,7 +103,9 @@ content supports the change. Do not impose sentence-length targets or punctuatio
 ### Detector-sensitive typography
 
 Some downstream AI detectors overweight surface typography. For explicit de-AI output, normalize these features when no
-stronger house style, publication rule, quoted-source requirement, or supplied voice requires them:
+stronger house style, publication rule, quoted-source requirement, or supplied voice requires them. When the `writing`
+skill is also active, this explicit de-AI normalization is a deliberate narrow exception to its ordinary
+punctuation-neutral guidance:
 
 - Prefer commas, parentheses, colons, or separate sentences to an em dash (`—`). Avoid introducing new em dashes and
   replace existing ones when the same relation can be expressed naturally without changing cadence or meaning.

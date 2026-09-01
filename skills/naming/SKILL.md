@@ -26,10 +26,12 @@ Treat established project vocabulary as part of the naming contract.
 - **Evidence** — When relevant, check existing code, documentation, schemas, APIs, and sibling names for how the concept
   is actually represented. Surface contradictions between stated domain language and the repository instead of
   normalizing them silently.
-- **Update** — When a canonical domain term, distinction, or definition becomes settled during the work, update the
-  applicable `DICT.md` immediately rather than batching vocabulary changes for later.
-- **Creation** — Create `DICT.md` lazily only when a durable domain term or distinction has actually been established and
-  no applicable project dictionary already exists. Do not create it merely because this skill is active.
+- **Update** — When repository mutation is already authorized and a canonical domain term, distinction, or definition
+  becomes settled during the work, update the applicable `DICT.md` immediately rather than batching vocabulary changes
+  for later. Without edit authorization, surface the proposed dictionary change but do not modify the repository.
+- **Creation** — When repository mutation is already authorized, create `DICT.md` lazily only after a durable domain term
+  or distinction has actually been established and no applicable project dictionary exists. Do not create it merely
+  because this skill is active. Without edit authorization, recommend creation when useful but do not create it.
 - **Format** — When creating or updating `DICT.md`, load [the dictionary format](references/dict.md) before editing it.
 - **Scope** — Keep `DICT.md` focused on domain vocabulary and term-specific usage. It is not an implementation spec,
   scratchpad, architecture log, or home for general naming rules.
