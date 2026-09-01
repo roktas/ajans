@@ -1,0 +1,4 @@
+interface:
+  display_name: "Go"
+  short_description: "Modern Go and local Go conventions"
+  default_prompt: "Use $go to write or revise substantive Go code."
