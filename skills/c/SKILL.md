@@ -22,6 +22,8 @@ settles the decision.
 
 - **Simplicity** — Prefer simple C over clever C. Favor explicit ownership, control flow, and data representation over
   compact tricks that obscure lifetime, bounds, or error behavior.
+- **Language** — Keep code comments, identifiers, and file names in English unless an established project or external
+  interface requires another language.
 - **Default** — Use the structural conventions of
   [Linux kernel coding style](https://docs.kernel.org/process/coding-style.html) when no stronger local convention exists.
 - **Indent** — Use one tab (8 columns). Do not convert indentation tabs to spaces.
