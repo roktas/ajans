@@ -28,6 +28,8 @@ These are core TeX source defaults when no stronger repository or publication ru
 - **Simplicity** — Prefer publication-quality source with simple structure. Avoid macro layers, package additions, and
   layout overrides that do not earn their complexity.
 - **Indent** — Indent nested TeX source with 2 spaces when the project has no established source-format convention.
+- **Language** — Keep TeX comments, control-sequence names, labels, and file names in English unless the project or
+  publication convention requires another language.
 - **Comments** — Keep source self-explanatory. Do not add comments that merely repeat source, compensate for poor naming,
   narrate a code change, preserve commented-out code, or state the obvious. Preserve comments when they intentionally
   control whitespace, token joining, generated output, or tool directives.
@@ -36,14 +38,18 @@ These are core TeX source defaults when no stronger repository or publication ru
 
 - **Authoritative source** — Distinguish source from generated `.aux`, `.bbl`, `.bcf`, `.blg`, `.fls`, `.log`, `.out`,
   `.run.xml`, `.synctex.gz`, `.toc`, and rendered outputs. Do not edit an intermediate artifact as if it were source.
-- **Environment** — Inspect the main document, included sources, engine directives, build entry points, CI, document
-  class, publisher template, package set, bibliography backend, fonts, language system, and supported TeX distribution
-  before changing TeX behavior.
+- **Format** — Identify the actual TeX format before applying format-specific rules. Do not apply LaTeX class, package,
+  or `latexmk` assumptions to ConTeXt or plain TeX; preserve the project's format and toolchain.
+- **Environment** — Inspect the main document, included sources, engine directives, build entry points, CI, class or
+  format setup, publisher template, package or module set, bibliography backend, fonts, language system, and supported
+  TeX distribution before changing TeX behavior.
 - **Engine** — Preserve an existing project's engine and publication environment unless the task changes them. For a new
-  unconstrained Unicode document, prefer LuaLaTeX when available; do not assume the current machine's engine exists in
-  the target publication environment.
-- **Contracts** — Treat public commands, environments, counters, labels, citation keys, auxiliary-file formats, class
-  options, and package options as possible contracts. Trace definitions and uses before changing signatures or expansion.
+  unconstrained Unicode LaTeX document, prefer LuaLaTeX when available; do not assume the current machine's engine exists
+  in the target publication environment.
+- **Contracts** — Treat public commands, environments, counters, labels, citation keys, auxiliary-file formats, class or
+  format options, and package or module options as possible contracts. Trace definitions and uses before changing
+  signatures or expansion. When compatibility is material, distinguish source compatibility, build or toolchain
+  compatibility, and rendered-output stability.
 
 ## TeX mechanics
 
@@ -52,15 +58,18 @@ These are core TeX source defaults when no stronger repository or publication ru
   alone.
 - **Whitespace** — Preserve comments and line endings when they control whitespace, token joining, paragraph breaks,
   generated output, or tool directives; do not assume every source line break is semantic.
-- **Fonts** — Keep language and font configuration compatible with the selected engine. Use `fontspec` only with XeLaTeX
-  or LuaLaTeX. Add `inputenc` only when an actual older-kernel or non-default-encoding requirement needs it.
-- **Languages** — Keep the project's established `babel` or `polyglossia` system unless changing it is part of the task.
-  Do not replace packages or the engine merely as incidental cleanup.
+- **Fonts** — Keep language and font configuration compatible with the selected engine. In LaTeX, use `fontspec` only
+  with XeLaTeX or LuaLaTeX. For pdfLaTeX, distinguish input encoding from output font encoding: modern UTF-8 input
+  defaults remove the usual need for `inputenc`, but an appropriate font encoding, commonly T1 for Latin-script text,
+  remains a separate decision.
+- **Languages** — In LaTeX, keep the project's established `babel` or `polyglossia` system unless changing it is part of
+  the task. Do not replace packages or the engine merely as incidental cleanup.
 
 ## Build and rendering
 
 - **Entry point** — Use the configured build entry point rather than assembling an ad hoc command when the project
-  already defines one.
+  already defines one. For ConTeXt LMTX, preserve the project's `context` or `mtxrun` entrypoint rather than translating
+  the build into LaTeX tooling.
 - **Convergence** — Run enough passes for references, tables of contents, indices, glossaries, and bibliography data to
   converge; prefer a dependency-aware driver such as the project's configured `latexmk` workflow when present.
 - **Diagnostics** — Read the first causal error and relevant surrounding log context. Distinguish a source defect from
