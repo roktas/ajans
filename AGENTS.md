@@ -13,6 +13,11 @@
 - Do not add leads mechanically. A clear section or subsection heading already provides the same anchor when all following rules share one decision surface.
 - Prefer concrete examples when they materially clarify a rule, especially for naming and other judgment-heavy guidance.
 
+## Document transfer
+
+- When asked to transfer, incorporate, or carry content into another document, transfer the substance rather than source-navigation artifacts.
+- Do not add or preserve URLs, hyperlinks, source links, or similar references in the target document unless the user explicitly asks for them or the target document requires them as part of its contract.
+
 ## Repository language
 
 - Describe the current desired state directly. Do not frame ordinary repository guidance in terms of migration history, legacy state, or what content used to be elsewhere.
