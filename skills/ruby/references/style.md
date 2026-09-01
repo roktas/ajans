@@ -1,7 +1,7 @@
 # Ruby style defaults
 
-Load this reference only when a Ruby source-style decision is material and repository rules, a configured formatter, or
-the established surrounding style do not already settle it. These are working defaults, not universal Ruby correctness.
+These are core Ruby working defaults. Apply them whenever the Ruby skill is active. Explicit repository rules, configured
+formatters, and established local conventions refine them and override them only for a concrete conflict.
 
 - **Formatting** — Use the formatter already configured by the repository. When none is configured, follow surrounding
   style and do not introduce a formatter as an incidental change. Do not hand-align code against formatter output.
