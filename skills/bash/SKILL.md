@@ -21,6 +21,10 @@ Apply the general `naming` skill before creating, renaming, or proposing Bash na
 
 These defaults apply to Bash. For POSIX `sh`, use the compatible forms under `## Patterns` instead of Bash-only syntax.
 
+- **Simplicity** - Prefer simple Bash over clever Bash. Favor direct shell constructs over compact tricks that obscure
+  expansion, status propagation, quoting, or control flow.
+- **Language** - Keep code comments, identifiers, and file names in English unless an established project or external
+  interface requires another language.
 - **Indent** - 1 tab (8 spaces). Do NOT convert tabs to spaces.
 - **Scope** - Use `local` for local vars, `readonly` for globals.
 - **Local order** - In functions, declare locals assigned from positional arguments first, in positional order. Then leave
@@ -41,6 +45,9 @@ These defaults apply to Bash. For POSIX `sh`, use the compatible forms under `##
   ```
 
 - **Alphabetize** arrays, dicts, assignments, and functions if order is irrelevant.
+- **Comments** - Keep code self-documenting. Do not add comments that merely repeat code, compensate for poor naming,
+  narrate a code change, preserve commented-out code, or state the obvious. Comment non-obvious shell semantics,
+  portability constraints, or invariants that the code cannot express clearly itself.
 - **Script layout** - In standalone scripts, group content in this order:
   1. Prelude
   2. Helpers
