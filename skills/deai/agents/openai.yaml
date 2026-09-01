@@ -1,0 +1,6 @@
+interface:
+  display_name: "De-AI"
+  short_description: "Remove formulaic generative writing artifacts"
+  default_prompt: "Use $deai to remove formulaic generative artifacts while preserving meaning, evidence, and voice."
+policy:
+  allow_implicit_invocation: false
