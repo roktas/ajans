@@ -1,5 +1,5 @@
 ---
-name: text
+name: writing
 description: >-
   General prose judgment for substantive drafting, translation, editorial revision, and language-sensitive review.
   Use when meaning, structure, terminology, register, or expression materially determines the result. Do not activate
@@ -7,7 +7,7 @@ description: >-
   inspection where prose itself is not the work product.
 ---
 
-# Text
+# Writing
 
 ## Baseline
 

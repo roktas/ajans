@@ -5,7 +5,7 @@
 - Keep skills compact, direct, and useful to a competent human as well as an agent.
 - Keep core guidance in `SKILL.md`. Use `references/` only for conditional detail that benefits from progressive disclosure.
 - Style is always core. Do not move style rules to `references/`; keep them in the owning `SKILL.md`.
-- Do not duplicate strong external guidance. When an established external skill owns a domain well, delegate to it and keep only Ekler-specific guidance locally.
+- Do not duplicate strong external guidance. When an established external skill owns a domain well, delegate to it and keep only Ajans-specific guidance locally.
 
 ## Specialist boundaries
 

@@ -1,6 +1,6 @@
-# Ekler
+# Ajans
 
-Ekler is a small collection of focused agent skills. Each skill should add specific judgment or behavior without turning
+Ajans is a small collection of focused agent skills. Each skill should add specific judgment or behavior without turning
 ordinary work into a framework.
 
 ## Sources
@@ -15,7 +15,7 @@ The upstream skill is MIT-licensed; its license notice is preserved in [`skills/
 ### Testing
 
 [`skills/testing`](skills/testing) is adapted from Matt Pocock's
-[`tdd`](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd) skill. Ekler keeps its behavioral testing,
+[`tdd`](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd) skill. Ajans keeps its behavioral testing,
 public-seam, anti-pattern, mocking-boundary, and red-green ideas, but makes TDD an explicit test-first mode inside a
 broader testing skill. The upstream skill is MIT-licensed; its license notice is preserved in
 [`skills/testing/LICENSE`](skills/testing/LICENSE).
