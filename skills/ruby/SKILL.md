@@ -9,6 +9,16 @@ description: >-
 
 # Ruby
 
+## Naming
+
+Apply the general `naming` skill before creating, renaming, or proposing Ruby names or durable paths.
+
+- Use `snake_case` for methods, local variables, and symbols; use `CamelCase` for classes and modules.
+- Use `?` for predicates that return boolean-like results. Use `!` only when it communicates a meaningful dangerous or
+  mutating distinction; do not add punctuation merely for emphasis.
+- Preserve public method names, keyword names, constants, and serialized or reflective names as contracts unless changing
+  that surface is in scope.
+
 ## Baseline
 
 ### Runtime contract

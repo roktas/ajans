@@ -14,6 +14,13 @@ metadata:
 
 # Bash
 
+## Naming
+
+Apply the general `naming` skill before creating, renaming, or proposing Bash names or durable paths.
+
+- In scripts that expose top-level commands, name command entrypoint functions with the `command.` prefix, such as
+  `command.start()` or `command.doctor()`.
+
 ## Style
 
 - **Indent** - 1 tab (8 spaces). Do NOT convert tabs to spaces.
@@ -55,8 +62,6 @@ metadata:
   ```
 
   Keep functions alphabetized inside each section.
-- **Command functions** - In scripts that expose top-level commands, name command entrypoint functions with the
-  `command.` prefix, such as `command.start()` or `command.doctor()`.
 - **Main section** - Put non-command functions used directly by `main`, such as `usage`, `dispatch`, or `help`, in the
   `Main` section alphabetically. The `main` function itself is always the last function in the `Main` section regardless
   of alphabetical order.

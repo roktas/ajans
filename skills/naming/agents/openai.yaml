@@ -1,0 +1,4 @@
+interface:
+  display_name: "Naming"
+  short_description: "Names, vocabulary, and durable paths"
+  default_prompt: "Use $naming before creating, renaming, or proposing a durable name or path."

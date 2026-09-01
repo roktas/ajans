@@ -10,6 +10,11 @@ description: >-
 
 # C
 
+## Naming
+
+Apply the general `naming` skill before creating, renaming, or proposing C names or durable paths. Preserve naming that is
+part of a public ABI, external interface, or established project convention unless changing that contract is in scope.
+
 ## Baseline
 
 ### Contract and platform

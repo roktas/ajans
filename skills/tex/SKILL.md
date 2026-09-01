@@ -10,6 +10,17 @@ description: >-
 
 # TeX
 
+## Naming
+
+Apply the general `naming` skill before creating, renaming, or proposing TeX names or durable paths.
+
+- Follow the document or package's established schemes for commands, environments, counters, labels, citation keys, and
+  other named TeX entities.
+- Treat labels, citation keys, public commands, and environments as cross-reference or API contracts when they have
+  consumers; do not rename them merely for stylistic consistency.
+- Respect TeX tokenization and control-sequence syntax rather than forcing a general punctuation or word-separator style
+  onto command names.
+
 ## Baseline
 
 ### Source and constraints
