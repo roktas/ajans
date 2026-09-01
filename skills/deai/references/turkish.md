@@ -145,13 +145,9 @@ After:
 The three actions support one coordinated sentence. If the intended emphasis requires separate sentences, keep them
 separate and vary only structure that has no function.
 
-### Preserve justified passive and evidentiality
+### Preservation case: justified passive and evidentiality
 
-Before:
-
-> Örneklerin analizden önce -80 °C'de saklandığı bildirilmektedir.
-
-After:
+Keep unchanged:
 
 > Örneklerin analizden önce -80 °C'de saklandığı bildirilmektedir.
 

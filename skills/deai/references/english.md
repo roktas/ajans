@@ -211,13 +211,9 @@ After:
 
 The repair converts vague appended analysis into direct actions without inventing new facts.
 
-### Preserve unnamed attribution when no source is supplied
+### Preservation case: unnamed attribution without a supplied source
 
-Before:
-
-> Experts argue that the policy may improve retention.
-
-After:
+Keep unchanged:
 
 > Experts argue that the policy may improve retention.
 
@@ -292,45 +288,31 @@ After:
 The semantic relation and quotation remain intact. This normalization is a downstream presentation choice, not evidence
 that the original was machine-written. Preserve typographic punctuation when a publication or supplied style requires it.
 
-### Preserve legitimate passive voice and uncertainty
+### Preservation case: legitimate passive voice and uncertainty
 
-Before:
-
-> The samples were stored at -80°C before analysis, and the effect may reflect batch variation.
-
-After:
+Keep unchanged:
 
 > The samples were stored at -80°C before analysis, and the effect may reflect batch variation.
 
 The actor is irrelevant to the storage statement, and `may` carries epistemic meaning. Do not make the sentence active
 or categorical merely to sound less formulaic.
 
-### Preserve legitimate personal cadence
+### Preservation case: legitimate personal cadence
 
-Before:
-
-> I missed the train again. Honestly, that was on me. The platform clock had been broken since Tuesday, and I knew it.
-
-After:
+Keep unchanged:
 
 > I missed the train again. Honestly, that was on me. The platform clock had been broken since Tuesday, and I knew it.
 
 A candid aside and irregular rhythm fit the supplied voice. Changing them would flatten it without repairing a cluster.
 
-### Do not manufacture personality
+### Preservation case: already direct and appropriately uncertain
 
-Before:
-
-> The trial produced three million lines of generated code. Developers reacted differently, and the implications remain
-> unclear.
-
-After:
+Keep unchanged:
 
 > The trial produced three million lines of generated code. Developers reacted differently, and the implications remain
 > unclear.
 
-The passage is already direct and appropriately uncertain. Do not add first-person reaction, humor, conflict, or a
-dramatic conclusion merely to make it feel human.
+Do not add first-person reaction, humor, conflict, or a dramatic conclusion merely to make the passage feel human.
 
 ## False positives
 
