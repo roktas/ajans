@@ -19,6 +19,12 @@ Apply the general `naming` skill before creating, renaming, or proposing Ruby na
 - Preserve public method names, keyword names, constants, and serialized or reflective names as contracts unless changing
   that surface is in scope.
 
+## Style
+
+Read [style defaults](references/style.md) completely whenever this skill is active. Treat them as core Ruby guidance,
+refined by explicit repository rules, configured formatters, and established local conventions when those provide a
+concrete conflicting rule.
+
 ## Baseline
 
 ### Runtime contract
@@ -83,8 +89,6 @@ Apply the general `naming` skill before creating, renaming, or proposing Ruby na
   authoritative substitutes when official documentation is available. Do not preload or preserve a version table in
   this skill.
 - For Bundler command behavior, consult <https://bundler.io/man/> when the installed/configured version matters.
-- Load [style defaults](references/style.md) only when a Ruby source-style decision is material and repository rules, a
-  configured formatter, or established surrounding style do not already settle it.
 - Load [Minitest conventions](references/minitest.md) only when Minitest layout or naming is materially being created,
   changed, or reviewed. Do not load it for RSpec or for behavior-only test work whose established naming remains intact.
 - Load [YARD](references/yard.md) only when writing or reviewing Ruby public API documentation.
