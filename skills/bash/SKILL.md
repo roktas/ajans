@@ -6,10 +6,6 @@ description: >-
   producing or materially revising substantive Bash or POSIX shell code. Do not activate for routine technical Q&A,
   repository browsing, read-only inspection, tool use, one-off commands, file types, fenced examples, or incidental shell
   mentions.
-metadata:
-  author: https://github.com/roktas
-  version: "1.0.0"
-  source: https://github.com/roktas/home/tree/2b8e7df685a6b1fbe03e8156285ea4720fbb3b9e/agents/skills/bash
 ---
 
 # Bash
@@ -22,6 +18,8 @@ Apply the general `naming` skill before creating, renaming, or proposing Bash na
   `command.start()` or `command.doctor()`.
 
 ## Style
+
+These defaults apply to Bash. For POSIX `sh`, use the compatible forms under `## Patterns` instead of Bash-only syntax.
 
 - **Indent** - 1 tab (8 spaces). Do NOT convert tabs to spaces.
 - **Scope** - Use `local` for local vars, `readonly` for globals.
@@ -174,17 +172,3 @@ work() (
 - **Locale** - Sorting, character classes (`[a-z]`), and number formatting depend on locale. Add
   `export LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8` to the prelude in locale-dependent scripts for predictable
   behavior.
-
-## Fault diagnosis and correction
-
-Establish the actual interpreter and failing invocation before changing the script. Trace status through assignments,
-pipelines, functions, subshells, conditionals, and traps; distinguish parsing, expansion, word splitting, globbing,
-redirection, and signal behavior. Reproduce the narrow failure, correct its cause without rewriting established layout,
-then check the target dialect with `bash -n` or `shellcheck -s bash`/`shellcheck -s sh` and a focused behavior test when
-available.
-
-## Backward compatibility
-
-Check the concrete compatibility surface: interpreter and version, Bash versus POSIX dialect, invocation flags and
-arguments, output and exit statuses, environment variables, sourced functions, and working-directory assumptions. Do not
-add compatibility for an older shell or invocation contract without evidence that it is currently supported.

@@ -55,9 +55,11 @@ language skill has a `## Naming` section, apply it as a language-specific refine
 - **Representation** — Do not encode a value's type, representation, storage, or transport form in its name unless that
   distinction is materially useful, such as when two representations coexist during conversion.
 - **Durability** — Prefer names that remain true as implementation and contents evolve. Do not encode an incidental tool,
-  format, date, status, or migration stage unless it is a durable distinction.
+  format, date, status, or temporary stage unless it is a durable distinction.
 - **Generic roles** — Avoid generic modeling words such as `manager`, `handler`, `helper`, `util`, `common`, `data`,
   `info`, `object`, or `service` when a domain name states the responsibility more precisely.
+- **Consistency** — Before finalizing introduced names, check the affected scope for synonyms, repeated context,
+  inconsistent siblings, superseded names, and paths whose components no longer describe their role.
 - **Exceptions** — Break these rules only for a concrete convention, contract, interoperability requirement, or clarity
   reason.
 
@@ -93,8 +95,3 @@ Treat durable file and directory paths as naming decisions with an additional po
   explicit when it affects portability, privacy, or maintenance.
 - **Resolution** — Verify an external tool's path expansion and resolution semantics before encoding them into a durable
   artifact.
-
-## Closeout
-
-Before finalizing a change that introduced names, re-read the affected scope for synonymous concepts, duplicated context,
-inconsistent siblings, stale superseded names, and paths whose components no longer describe their contents or role.

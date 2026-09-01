@@ -1,7 +1,7 @@
 ---
 name: ruby
 description: >-
-  Ruby implementation judgment for modern syntax, design, style, public APIs, gems and loading, Bundler, tests, typing,
+  Ruby implementation judgment for modern syntax, models, style, public APIs, gems and loading, Bundler, tests, typing,
   visibility, and YARD. Use only when producing or materially revising substantive Ruby code. Do not activate for routine
   technical Q&A, repository browsing, read-only inspection, Ruby tool use, file types, fenced examples, project labels,
   or incidental Ruby mentions.
@@ -53,11 +53,12 @@ Do not reorder or reformat unrelated Ruby merely because this skill is active.
   files, the gemspec's `required_ruby_version`, lockfiles, CI, and project rules. The installed interpreter describes the
   current machine, not the compatibility floor.
 - **Default modernity** — When no version evidence exists, prefer modern idiomatic Ruby and do not invent compatibility
-  constraints. State a version assumption only when it can materially change the design or result.
+  constraints. State a version assumption only when it can materially change the result.
 - **Public surface** — Treat positional and keyword parameters, block behavior, visibility, constants, exceptions,
-  equality and hashing, serialization, load paths, executables, and type signatures as possible contracts.
+  equality and hashing, serialization, load paths, executables, and type signatures as possible contracts. Preserve
+  concrete consumer contracts rather than hypothetical compatibility.
 
-## Design
+## Models and abstractions
 
 - **Domain ownership** — Give each real concept, invariant, and behavior a coherent owner. Use the number of classes the
   domain requires; do not drain behavior into procedural services, hashes, conditionals, or caller knowledge merely to
@@ -98,15 +99,10 @@ Do not reorder or reformat unrelated Ruby merely because this skill is active.
   `class << self`. Keep `private_class_method` for isolated, inherited, generated, or deliberately post-defined
   visibility changes.
 
-## Testing
+## Tests
 
-- **Framework** — Preserve the repository's selected Minitest or RSpec framework and helper. Do not translate frameworks
+- **Framework** — Preserve the repository's selected Minitest or RSpec framework and helper; do not translate frameworks
   merely to apply this guidance.
-- **Characterization** — Before changing established behavior, add or verify characterization coverage for the affected
-  contract when practical. Do not begin a major refactor without enough coverage of materially affected behavior.
-- **Scope** — Run the narrowest test command that covers the change, then broaden when touched code is shared. Focus
-  cases on observable contracts such as call shape, blocks, exceptions, equality, serialization, load modes, executable
-  behavior, and the supported Ruby floor.
 - **Minitest** — Load [Minitest conventions](references/minitest.md) when Minitest layout or naming is materially being
   created, changed, or reviewed. Do not load it for RSpec or behavior-only work whose established naming remains intact.
 
@@ -116,12 +112,3 @@ Do not reorder or reformat unrelated Ruby merely because this skill is active.
 - **Authority** — Prefer project documentation first. For Ruby language and standard-library behavior, use the official
   Ruby documentation for the supported version. For Bundler behavior, use the official Bundler command documentation
   when the configured version matters.
-
-## Compatibility and cleanup
-
-- **Compatibility** — Check the concrete supported surface before modernization: calls, blocks, visibility, constants,
-  return values, exceptions, equality and hashing, persisted representations, type signatures, gem entrypoints,
-  executable behavior, and load paths. Preserve contracts with real consumers rather than hypothetical compatibility.
-- **Residue** — After a change, inspect the affected Ruby surface for stale requires, autoload entries, constants,
-  aliases, compatibility branches, visibility declarations, signatures, tests, fixtures, and gem metadata. Remove only
-  residue made obsolete by the change; do not broaden cleanup into unrelated churn.

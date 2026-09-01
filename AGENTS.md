@@ -7,6 +7,12 @@
 - Style is always core. Do not move style rules to `references/`; keep them in the owning `SKILL.md`.
 - Do not duplicate strong external guidance. When an established external skill owns a domain well, delegate to it and keep only Ekler-specific guidance locally.
 
+## Specialist boundaries
+
+- Keep specialist skills focused on domain-specific judgment, not generic task modes or workflow controls.
+- Do not mirror generic sections for debugging, compatibility review, minimal changes, cleanup, verification, simplification, polishing, or writing modes merely because those activities can occur in the domain.
+- When a domain has unique guidance for one of those decisions, place only the domain-specific distinction under its natural subject heading instead of creating a generic workflow section.
+
 ## Rule presentation
 
 - Use short semantic leads such as `**Scope**`, `**Contracts**`, or `**Ordering**` when a list contains distinct decision surfaces and the lead makes the relevant rule easier to find.
