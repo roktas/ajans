@@ -62,8 +62,32 @@ These are core TeX source defaults when no stronger repository or publication ru
   with XeLaTeX or LuaLaTeX. For pdfLaTeX, distinguish input encoding from output font encoding: modern UTF-8 input
   defaults remove the usual need for `inputenc`, but an appropriate font encoding, commonly T1 for Latin-script text,
   remains a separate decision.
-- **Languages** — In LaTeX, keep the project's established `babel` or `polyglossia` system unless changing it is part of
-  the task. Do not replace packages or the engine merely as incidental cleanup.
+- **Languages** — Preserve an existing LaTeX project's established `babel` or `polyglossia` setup unless changing it is
+  part of the task. For a new unconstrained LuaLaTeX or XeLaTeX document, prefer `polyglossia`.
+
+## LaTeX preamble
+
+Keep a new preamble minimal and add packages only for actual document requirements.
+
+- **Unicode** — For a new Turkish-first LuaLaTeX document, use this as the default language foundation:
+
+  ```tex
+  \usepackage{fontspec}
+  \usepackage{polyglossia}
+  \setdefaultlanguage{turkish}
+  \setotherlanguages{english}
+  ```
+
+  Adjust the declared languages to the document; do not add an explicit font selection until a font requirement exists.
+- **pdfLaTeX** — When pdfLaTeX is actually required, use compatible font encoding and language support. For a modern
+  LaTeX kernel, a Turkish-first baseline is:
+
+  ```tex
+  \usepackage[T1]{fontenc}
+  \usepackage[english,turkish]{babel}
+  ```
+
+  Add `inputenc` only for an actual older-kernel or non-default-input-encoding requirement.
 
 ## Build and rendering
 
