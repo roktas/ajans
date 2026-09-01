@@ -27,6 +27,8 @@ refine them and override them only for a concrete conflict.
 
 - **Simplicity** — Prefer simple Ruby over clever Ruby. Favor direct language features over metaprogramming or indirection
   that does not earn its cost.
+- **Language** — Keep code comments, identifiers, and file names in English unless an established project or external
+  interface requires another language.
 - **Formatting** — Use the formatter already configured by the repository. When none is configured, follow surrounding
   style and do not introduce a formatter incidentally. Do not hand-align code against formatter output.
 - **Strings** — Use double quotes for strings by default.
