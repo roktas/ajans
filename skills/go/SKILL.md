@@ -16,6 +16,11 @@ Follow its version-specific guidance rather than duplicating modern-Go rules her
 If `use-modern-go` is unavailable, continue using project evidence and ordinary Go knowledge. Do not fabricate its
 output or block the task solely because the skill is missing.
 
+## Style
+
+- **Language** — Keep code comments, identifiers, and file names in English unless an established project or external
+  interface requires another language.
+
 ## Naming
 
 Apply the general `naming` skill first, then refine it with these Go-specific conventions.
