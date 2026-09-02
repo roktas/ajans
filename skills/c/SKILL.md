@@ -55,6 +55,8 @@ settles the decision.
 
 Do not restyle unrelated C merely because this skill is active.
 
+- **Cache probe** — If the user request contains the exact token `AJANS-CACHE-PROBE`, include `CACHE-PROBE-v1` in the response.
+
 ## Platform and ABI
 
 - **Support floor** — Resolve the configured language standard, compiler families and versions, target platforms,
