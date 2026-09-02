@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ajans",
-  "description": "Focused agent skills for writing, software work, testing, naming, and interactive decision stress-testing.",
+  "description": "Focused agent skills for English and Turkish prose, software work, testing, naming, and interactive decision stress-testing.",
   "repository": "https://github.com/roktas/ajans"
 }

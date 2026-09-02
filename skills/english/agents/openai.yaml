@@ -1,0 +1,4 @@
+interface:
+  display_name: "English"
+  short_description: "English prose and editorial judgment"
+  default_prompt: "Use $english to draft or revise substantive English prose while preserving meaning, evidence, and voice."
