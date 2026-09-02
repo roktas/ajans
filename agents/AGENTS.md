@@ -13,7 +13,6 @@ conflict.
   or explicit STE/ASD-STE100 requests. Do not load it for general or scholarly prose merely because the user asks to
   de-slop, simplify, make text readable, or write for non-native readers.
 - Before creating, renaming, or proposing a durable name or path, load `naming`.
-- Use `local` when deciding ownership or placement of `.local/`, `.agents/`, or other project-lifecycle side files.
 - End every user-facing response with exactly one one-line skill receipt: `**Skills:** <comma-separated skill names>`;
   use `**Skills:** none` when no skill was applied. Include every skill actually applied regardless of source, and do
   not list skills merely inspected or considered.
