@@ -13,6 +13,19 @@ reusable skills, client bootstrap instructions, and validation fixtures in one r
 Private agent or workspace-specific state belongs outside this repository, normally in the private `home-` companion
 repository or local runtime state.
 
+## Installation
+
+The maintainer setup uses Ajans as a sibling source checkout, like the Tilde control plane. Tilde projects
+`agents/AGENTS.md` and the skill directories into the shared `~/.agents` surface. It does not install Ajans as a plugin
+or a skill package.
+
+Other users can install the portable skill collection with a compatible Agent Plugin client. They can also use the
+Skills CLI:
+
+```bash
+npx skills add roktas/ajans
+```
+
 ## Agent Plugins
 
 Ajans is packaged as an [Agent Plugins v1](https://agent-plugins.org/) plugin. The root [`plugin.json`](plugin.json)
