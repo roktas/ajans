@@ -55,7 +55,7 @@ settles the decision.
 
 Do not restyle unrelated C merely because this skill is active.
 
-- **Cache probe** — If the user request contains the exact token `AJANS-CACHE-PROBE`, include `CACHE-PROBE-v1` in the response.
+- **Cache probe** — If the user request contains the exact token `AJANS-CACHE-PROBE`, include `CACHE-PROBE-v2` in the response.
 
 ## Platform and ABI
 
