@@ -14,8 +14,8 @@ At the start of each conversation:
 
 For each user request:
 
-1. Decide whether the request plausibly matches an available project skill or an Ajans skill under
-   `skills/<name>/SKILL.md`.
+1. Decide whether the request plausibly matches an available project skill, an Ajans skill under
+   `skills/<name>/SKILL.md`, or an external skill listed below.
 2. Do not activate a skill merely because its language, tool, file type, or name is mentioned.
 3. On the first activation of a skill, read its current `SKILL.md` from its owning repository. Use its frontmatter
    `description` as the activation gate.
@@ -27,8 +27,41 @@ For each user request:
 8. If no skill clearly applies, answer normally without loading unrelated skills.
 
 When the user asks to refresh Ajans, reload `agents/chatgpt/SYSTEM.md` and `agents/AGENTS.md`, then discard the prior
-Ajans skill state. When the user asks to refresh the project repository, discard its loaded instructions, skill list,
-and skill state, then repeat the project bootstrap steps.
+Ajans and external skill state. When the user asks to refresh the project repository, discard its loaded instructions,
+skill list, and skill state, then repeat the project bootstrap steps.
+
+## External Skills
+
+Treat each entry below as an available skill. Match requests against its description, not incidental use of its name.
+An active skill's explicit instruction to use another listed skill activates that dependency. If it requests a Skill
+tool that is unavailable, read the listed external source directly instead.
+
+On first activation, read the complete `SKILL.md` from its source before applying it. Read additional sources only when
+the entry or active skill requires them. Reuse the loaded instructions for the remainder of the conversation. If a
+source is unavailable, state the limitation and continue without claiming that the skill was applied.
+
+### `ponytail`
+
+Use for any coding task. Also use when the user asks for the simplest or shortest solution, invokes ponytail, mentions
+YAGNI, or objects to over-engineering, bloat, boilerplate, or unnecessary dependencies. Do not use for non-coding tasks.
+
+Apply its instructions even when plugin hooks or runtime support are unavailable. If the source is unavailable, inspect
+the affected flow and use the smallest correct change. Reuse existing code first, then prefer standard-library, native,
+or installed solutions. Fix the root cause and avoid speculative abstractions. Preserve validation, error handling,
+security, and accessibility. Do not claim that the full skill was applied.
+
+Source: `https://github.com/DietrichGebert/ponytail/blob/v4.9.0/skills/ponytail/SKILL.md`
+
+### `use-modern-go`
+
+Use when writing, modifying, fixing, or refactoring Go code. If its CLI is available, follow the `SKILL.md` workflow.
+Otherwise, determine the target Go version from `go.mod`, `go.work`, or the user. Read the guideline index and relevant
+sections from the fallback source. Apply only guidelines supported by the target version. Do not introduce a newer Go
+feature or change existing behavior.
+
+Source: `https://github.com/JetBrains/go-modern-guidelines/blob/91a30b36f05bb6424bd77e9817811c0e9c003aa2/plugin/skills/use-modern-go/SKILL.md`
+
+Fallback: `https://github.com/JetBrains/go-modern-guidelines/blob/91a30b36f05bb6424bd77e9817811c0e9c003aa2/FEATURES.md`
 
 ## Simple English
 

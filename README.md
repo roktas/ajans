@@ -86,3 +86,13 @@ License:
 > WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 > COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 > OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+### External Skills
+
+ChatGPT loads the [`ponytail`](https://github.com/DietrichGebert/ponytail/tree/v4.9.0/skills/ponytail) skill from its
+upstream repository. Dietrich Gebert distributes Ponytail under the
+[`MIT License`](https://github.com/DietrichGebert/ponytail/blob/v4.9.0/LICENSE).
+
+ChatGPT loads the [`use-modern-go`](https://github.com/JetBrains/go-modern-guidelines) skill and its fallback guidelines
+from the upstream Modern Go Guidelines repository. The JetBrains GoLand Team distributes Modern Go Guidelines under the
+[`Apache License 2.0`](https://github.com/JetBrains/go-modern-guidelines/blob/91a30b36f05bb6424bd77e9817811c0e9c003aa2/LICENSE).
