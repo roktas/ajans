@@ -15,8 +15,10 @@ Apply this guidance before choosing a name, not as cleanup after implementation.
 
 Treat established project vocabulary as part of the naming contract.
 
-- **Lookup** — Before naming, look for a project `DICT.md`. Also inspect applicable `AGENTS.md` sections named `Lexicon`,
-  `Glossary`, `Dictionary`, or `Vocabulary`. Apply their canonical terms, definitions, distinctions, and usage rules.
+- **Lookup** — At the first material naming decision in a repository, check once for an applicable `DICT.md`. Reuse that
+  result unless the repository scope changes. Require this lookup for domain concepts, public interfaces, schemas,
+  persisted names, and configuration keys. For local names, follow nearby usage unless terminology is material. Apply
+  relevant vocabulary sections from already-loaded `AGENTS.md`; do not search for them again.
 - **Canonical terms** — Reuse the canonical term for an existing concept instead of inventing a synonym. Use one name for
   one concept and do not reuse that name for unrelated concepts.
 - **Conflicts** — If the user or current work uses a term that conflicts with the project dictionary, surface the
