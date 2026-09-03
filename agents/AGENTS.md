@@ -49,10 +49,15 @@ conflict.
 - A review or diagnosis request does not authorize edits.
 - Prefer project-native solutions and existing patterns. Make the smallest coherent change and leave no dead code,
   temporary structure, accidental churn, or unrelated cleanup.
-- Preserve compatibility only for a concrete current contract such as a released API, external consumer, persisted or
-  deployed state, or explicit requirement. Do not preserve superseded paths merely because they existed before.
-- When a decision changes, make the resulting current state canonical across affected code, tests, documentation,
-  configuration, specifications, and instructions; remove contradictory residue within scope.
+- Preserve compatibility only for a concrete current contract, such as a released API, external consumer, persisted or
+  deployed state, or explicit requirement. Do not infer a contract only because a prior implementation existed.
+- Treat an explicitly rejected or replaced feature as absent from the current design. Unless a concrete current
+  contract requires it, remove superseded code, tests, documentation, configuration, terminology, aliases, fallbacks,
+  adapters, and migration machinery.
+- Do not add tests whose only purpose is to prove that superseded behavior, names, or paths are absent. Keep a negative
+  test only when rejection is a current public, safety, or security contract.
+- Document current behavior directly. Mention migration or transition history only when users must act on it for a
+  current upgrade or compatibility contract. Otherwise, leave that history to Git.
 - Review the affected artifact or bounded surface as a whole, not only changed hunks. Check for stale names, obsolete
   branches, dead code, unused dependencies, stale tests or docs, TODOs, debug output, generated residue, and accidental
   formatting churn.

@@ -42,12 +42,6 @@
 - When asked to transfer, incorporate, or carry content into another document, transfer the substance rather than source-navigation artifacts.
 - Do not add or preserve URLs, hyperlinks, source links, or similar references in the target document unless the user explicitly asks for them or the target document requires them as part of its contract.
 
-## Repository language
-
-- Describe the current desired state directly. Do not frame ordinary repository guidance in terms of migration history, legacy state, or what content used to be elsewhere.
-- Use historical language only when history itself is necessary to understand a compatibility contract, user request, or documented decision.
-- Avoid labels such as `legacy`, `old`, `new`, `migrated`, or `migration` when a present-tense description states the rule more clearly.
-
 ## Changes
 
 - Preserve existing guidance unless the requested design change makes it obsolete or contradictory.
