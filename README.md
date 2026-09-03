@@ -6,7 +6,8 @@ reusable skills, client bootstrap instructions, and validation fixtures in one r
 ## Layout
 
 - `agents/AGENTS.md`: public user-wide agent instructions.
-- `agents/CHATGPT.md`: ChatGPT Project bootstrap and lazy skill-loading rules.
+- `agents/chatgpt/PROMPT.md`: bootstrap prompt for ChatGPT Projects.
+- `agents/chatgpt/SYSTEM.md`: ChatGPT-specific instructions and lazy skill-loading rules.
 - `skills/<name>/SKILL.md`: reusable Agent Skills and their skill-local resources.
 - `tests/`: skill-package validation and regression fixtures.
 
@@ -64,3 +65,24 @@ broader testing skill. The upstream skill is MIT-licensed; its license notice is
 
 If these skills are useful to you, browse the broader [`mattpocock/skills`](https://github.com/mattpocock/skills)
 repository. It contains other focused skills that are worth reviewing directly at the source.
+
+### Simple English
+
+The Simple English guidance in [`agents/chatgpt/SYSTEM.md`](agents/chatgpt/SYSTEM.md) incorporates the standalone system
+prompt from AminBlg's [`SimpleEnglish`](https://github.com/AminBlg/SimpleEnglish) project. The upstream work uses the MIT
+License:
+
+> Copyright (c) 2026 AminBlg
+>
+> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+> documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+> rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+> persons to whom the Software is furnished to do so, subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+> Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+> WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+> COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+> OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
