@@ -32,6 +32,8 @@ conflict.
 - Keep code-facing text in English: comments, identifiers, file names, commit messages, and repository documentation.
 - Derive substantive prose and durable design choices from the actual purpose, evidence, audience, and context rather
   than generic templates or habitual framing.
+- When drafting, revising, or translating substantive prose, preserve claim strength, attribution, modality,
+  terminology, and required structure; do not turn reported, inferred, or uncertain information into fact.
 - For technical documentation, procedures, instructions, and operational prose, use ASD-STE100 Simplified Technical
   English when applicable unless a more-specific project, publication, or genre convention requires otherwise.
 - For scholarly, scientific, and other authored technical prose, apply STE clarity principles selectively; do not let
