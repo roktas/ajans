@@ -50,7 +50,7 @@ the affected flow and use the smallest correct change. Reuse existing code first
 or installed solutions. Fix the root cause and avoid speculative abstractions. Preserve validation, error handling,
 security, and accessibility. Do not claim that the full skill was applied.
 
-Source: `https://github.com/DietrichGebert/ponytail/blob/v4.9.0/skills/ponytail/SKILL.md`
+Source: `https://github.com/DietrichGebert/ponytail/blob/HEAD/skills/ponytail/SKILL.md`
 
 ### `use-modern-go`
 
@@ -59,9 +59,9 @@ Otherwise, determine the target Go version from `go.mod`, `go.work`, or the user
 sections from the fallback source. Apply only guidelines supported by the target version. Do not introduce a newer Go
 feature or change existing behavior.
 
-Source: `https://github.com/JetBrains/go-modern-guidelines/blob/91a30b36f05bb6424bd77e9817811c0e9c003aa2/plugin/skills/use-modern-go/SKILL.md`
+Source: `https://github.com/JetBrains/go-modern-guidelines/blob/HEAD/plugin/skills/use-modern-go/SKILL.md`
 
-Fallback: `https://github.com/JetBrains/go-modern-guidelines/blob/91a30b36f05bb6424bd77e9817811c0e9c003aa2/FEATURES.md`
+Fallback: `https://github.com/JetBrains/go-modern-guidelines/blob/HEAD/FEATURES.md`
 
 ## Simple English
 
