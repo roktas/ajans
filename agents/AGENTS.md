@@ -10,8 +10,8 @@ conflict.
 - Treat `deai` as explicit-only. Load it only when the user explicitly invokes it or explicitly asks for de-AI, de-slop,
   humanization, or formulaic-artifact cleanup.
 - Scope `simple-english` to substantive technical documentation, procedures, instructions, runbooks, operational prose,
-  or explicit STE/ASD-STE100 requests. Do not load it for general or scholarly prose merely because the user asks to
-  de-slop, simplify, make text readable, or write for non-native readers.
+  or explicit STE/ASD-STE100 requests. Do not load it for scholarly prose merely because the user asks to de-slop,
+  simplify, make text readable, or write for non-native readers.
 - Before creating, renaming, or proposing a durable name or path, load `naming`.
 - End every user-facing response with exactly one one-line skill receipt: `**Skills:** <comma-separated skill names>`;
   use `**Skills:** none` when no skill was applied. Include every skill actually applied regardless of source, and do
@@ -51,9 +51,9 @@ conflict.
   temporary structure, accidental churn, or unrelated cleanup.
 - Preserve compatibility only for a concrete current contract, such as a released API, external consumer, persisted or
   deployed state, or explicit requirement. Do not infer a contract only because a prior implementation existed.
-- Treat an explicitly rejected or replaced feature as absent from the current design. Unless a concrete current
-  contract requires it, remove superseded code, tests, documentation, configuration, terminology, aliases, fallbacks,
-  adapters, and migration machinery.
+- Treat an explicitly rejected or replaced feature as absent from the current design. Unless a concrete current contract
+  requires it, remove superseded code, tests, documentation, configuration, terminology, aliases, fallbacks, adapters,
+  and migration machinery.
 - Do not add tests whose only purpose is to prove that superseded behavior, names, or paths are absent. Keep a negative
   test only when rejection is a current public, safety, or security contract.
 - Document current behavior directly. Mention migration or transition history only when users must act on it for a
@@ -61,12 +61,13 @@ conflict.
 - Review the affected artifact or bounded surface as a whole, not only changed hunks. Check for stale names, obsolete
   branches, dead code, unused dependencies, stale tests or docs, TODOs, debug output, generated residue, and accidental
   formatting churn.
-- Verify changes in proportion to risk. Run narrow checks first and broaden only when shared behavior or risk warrants it.
+- Verify changes in proportion to risk. Run narrow checks first and broaden only when shared behavior or risk warrants
+  it.
 
 ## Commits
 
 - Use Conventional Commits unless a repository has a stronger established convention.
 - Derive the commit message from the staged or intended diff and its effect. Keep one reader-visible purpose per commit
-  when practical; use a scope only when it adds stable context, and do not claim fixes, tests, compatibility, performance,
-  or breaking behavior that the diff does not support.
+  when practical; use a scope only when it adds stable context, and do not claim fixes, tests, compatibility,
+  performance, or breaking behavior that the diff does not support.
 - Prefer a short imperative subject. Use a body only when non-obvious rationale or compatibility consequences matter.
