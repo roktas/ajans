@@ -19,8 +19,8 @@ conflict.
 
 ## Shell
 
-- Prefix every shell command with `rtk`; in chains and pipelines, prefix each command. Use `rtk proxy <cmd>` when raw
-  output is required.
+- When `rtk` is available, prefix every shell command with it, including each command in chains and pipelines. Use
+  `rtk proxy <cmd>` for raw output.
 - Run executable shebang scripts directly. Do not bypass a missing executable bit by invoking the interpreter; fix the
   mode only when the file is in scope, otherwise report the defect.
 - For literal `rg` searches, single-quote the pattern; prefer `-e 'pattern'` when it may look like an option.
